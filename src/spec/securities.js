@@ -9,7 +9,7 @@ let cnt = 0;
 
 cnt = 1;
 /** @enum {number}  */
-const SinCatg = {
+const SinCatg = Object.freeze({
     /** 一般股票 */
     GeneralStocks: cnt++,
     /** 一般特別股 */
@@ -76,10 +76,55 @@ const SinCatg = {
     ETN_Inverse: cnt++,
     /** 期權策略型ETN */
     ETN_Strategy: cnt++,
-};
+});
 
-Object.freeze(SinCatg);
+/** @enum {number} TSE/OTC */
+const WarrantTypes = Object.freeze({
+    /** 國內標的認購權證 */
+    CallWarrantsOnDomesticUnderlyingSecurities: cnt++,
+    /** 國內標的認售權證 */
+    PutWarrantsOnDomesticUnderlyingSecurities: cnt++,
+    /** 外國標的認購權證 */
+    CallWarrantsOnForeignUnderlyingSecurities: cnt++,
+    /** 外國標的認售權證 */
+    PutWarrantsOnForeignUnderlyingSecurities: cnt++,
+    /** 下限型認購權證 */
+    FloorCallWarrant: cnt++,
+    /** 上限型認售權證 */
+    CapPutWarrant: cnt++,
+    /** 可展延型下限型認購權證 */
+    ExtendableFloorCallWarrants: cnt++,
+    /** 可展延型上限型認售權證 */
+    ExtendableCapPutWarrant: cnt++,
+});
 
+/** @enum {number} 臺灣存託憑證 */
+const TaiwanDepositaryReceipt = Object.freeze({
+    /** 臺灣存託憑證 */
+    TaiwanDepositaryReceipt: cnt++,
+    /** 存託憑證可轉換公司債 */
+    DepositaryConvertibleBonds: cnt++,
+    /** 存託憑證附認股權公司債 */
+    DepositaryBondswithWarrants: cnt++,
+    /** 存託憑證附認股權公司債履約後之公司債 */
+    DepositaryBondsRemainingAfterExerciseOfWarrants: cnt++,
+    /** 存託憑證認股權憑證 */
+    DepositaryWarrants_DepositaryEquityWarrants: cnt++,
+});
+
+/** @enum {number} */
+const Misc = Object.freeze({
+    /** 轉換公司債 */
+    ConvertibleBonds: cnt++,
+    /** 交換公司債及交換金融債 */
+    ExchangeableCorporateBondsAndExchangeableFinancialBonds: cnt++,
+    /** 認股權憑證 */
+    EquityWarrants: cnt++,
+    /** 附認股權公司債 */
+    BondsWithWarrants: cnt++,
+    /** 附認股權公司債履約後之公司債 */
+    BondsRemainingAfterExerciseOfWarrants: cnt++,
+});
 
 /**------+---------+---------+---------+---------+---------+---------+----------
  * Exports
