@@ -8,8 +8,9 @@ let cnt = 0;
 ---------+---------+---------+---------+---------+---------+---------+--------*/
 
 cnt = 1;
+
 /** @enum {number}  */
-const SinCatg = Object.freeze({
+const Security = Object.freeze({
     /** 一般股票 */
     GeneralStocks: cnt++,
     /** 一般特別股 */
@@ -18,16 +19,16 @@ const SinCatg = Object.freeze({
     ExchangeableSpecialShares: cnt++,
     /** 附認股權特別股 */
     SpecialSharesWithStockOptions: cnt++,
+});
 
-    // 憑證
+/** @enum {number}  */
+const Certificate = Object.freeze({
+    /** 受益憑證(封閉式基金) */
+    BenefitCertificates_ClosedEndFunds: cnt++,
+});
 
-    /** 受益憑證 */
-    BenefitCertificates: cnt, // 受益憑證 (封閉式基金) 共用
-    /** 封閉式基金 */
-    ClosedEndFunds: cnt++, // 受益憑證 (封閉式基金) 共用
-
-    // ETF
-
+/** @enum {number} ETF */
+const ETFs = Object.freeze({
     /** ETF */
     ExchangeTradedFund: cnt++,
     /** ETF(外幣交易) */
@@ -54,18 +55,20 @@ const SinCatg = Object.freeze({
     ETF_Active: cnt++,
     /** 債券主動式ETF */
     ETF_ActiveBond: cnt++,
+});
 
-    // 債券
-
+/** @enum {number} 受益證券 */
+const BeneficiarySecurity = Object.freeze({
     /** 金融資產證券化受益證券 */
     FinancialAssetBeneficiarySecurities: cnt++,
     /** 不動產投資信託受益證券 (REITs) */
     RealEstateInvestmentTrusts: cnt++,
     /** 不動產資產信託受益證券 (REAT) */
     RealEstateAssetTrust: cnt++,
+});
 
-    // ETN
-
+/** @enum {number} ETN */
+const ETNs = Object.freeze({
     /** ETN */
     ExchangeTradedNote: cnt++,
     /** 債券ETN */
@@ -78,8 +81,8 @@ const SinCatg = Object.freeze({
     ETN_Strategy: cnt++,
 });
 
-/** @enum {number} TSE/OTC */
-const WarrantTypes = Object.freeze({
+/** @enum {number} 權證 (TSE/OTC) */
+const Warrants = Object.freeze({
     /** 國內標的認購權證 */
     CallWarrantsOnDomesticUnderlyingSecurities: cnt++,
     /** 國內標的認售權證 */
@@ -112,8 +115,8 @@ const TaiwanDepositaryReceipt = Object.freeze({
     DepositaryWarrants_DepositaryEquityWarrants: cnt++,
 });
 
-/** @enum {number} */
-const Misc = Object.freeze({
+/** @enum {number} 公司債 */
+const CBs = Object.freeze({
     /** 轉換公司債 */
     ConvertibleBonds: cnt++,
     /** 交換公司債及交換金融債 */
@@ -129,4 +132,13 @@ const Misc = Object.freeze({
 /**------+---------+---------+---------+---------+---------+---------+----------
  * Exports
 ---------+---------+---------+---------+---------+---------+---------+--------*/
-module.exports = { SinCatg };
+module.exports = {
+    Security,
+    Certificate,
+    ETFs,
+    BeneficiarySecurity,
+    ETNs,
+    Warrants,
+    TaiwanDepositaryReceipt,
+    CBs,
+};
