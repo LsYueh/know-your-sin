@@ -3,6 +3,12 @@
 
 <br>
 
+官方文件的分類方式  
+![分類表](docs/TSIN-And-IND-CODE.png)
+
+<br>
+
+解析工具的股票代號分析流程  
 ![分類表](docs/TSIN.png)
 
 <br><br>
