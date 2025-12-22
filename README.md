@@ -47,6 +47,10 @@ T30檔案格式內容如下：
 
 # 使用方式
 
+```js
+const kys = require('kys');
+```
+
 <br><br>
 
 # 其他資料
