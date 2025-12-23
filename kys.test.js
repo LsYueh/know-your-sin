@@ -1,8 +1,6 @@
-'use strict'
+import { test } from 'tap';
 
-const { test } = require('tap');
-
-const kys = require('./');
+import * as kys from 'kys';
 
 
 /**------+---------+---------+---------+---------+---------+---------+----------

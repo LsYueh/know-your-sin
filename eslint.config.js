@@ -4,8 +4,8 @@ const js = require('@eslint/js');
 
 module.exports = defineConfig([
   { ignores: ["**/node_modules/", "**/dist/"] },
-  { files: ['**/*.js'], languageOptions: { sourceType: 'commonjs' } },
-  { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.node } },
+  { files: ['**/*.{js,mjs}'], languageOptions: { sourceType: 'module', globals: globals.node, } },
+  { files: ['**/*.cjs'], languageOptions: { sourceType: 'commonjs' }, globals: globals.node, },
   js.configs.recommended,
   {
     rules: {

@@ -1,5 +1,3 @@
-'use strict'
-
 let cnt = 0;
 
 
@@ -10,7 +8,7 @@ let cnt = 0;
 cnt = 1;
 
 /** @enum {number}  */
-const Security = Object.freeze({
+export const Security = Object.freeze({
   /** 一般股票 */
   GeneralStocks: cnt++,
   /** 一般特別股 */
@@ -22,13 +20,13 @@ const Security = Object.freeze({
 });
 
 /** @enum {number}  */
-const Certificate = Object.freeze({
+export const Certificate = Object.freeze({
   /** 受益憑證(封閉式基金) */
   BenefitCertificates_ClosedEndFunds: cnt++,
 });
 
 /** @enum {number} ETF */
-const ETFs = Object.freeze({
+export const ETFs = Object.freeze({
   /** ETF */
   ExchangeTradedFund: cnt++,
   /** ETF(外幣交易) */
@@ -58,7 +56,7 @@ const ETFs = Object.freeze({
 });
 
 /** @enum {number} 受益證券 */
-const BeneficiarySecurity = Object.freeze({
+export const BeneficiarySecurity = Object.freeze({
   /** 金融資產證券化受益證券 */
   FinancialAssetBeneficiarySecurities: cnt++,
   /** 不動產投資信託受益證券 (REITs) */
@@ -68,7 +66,7 @@ const BeneficiarySecurity = Object.freeze({
 });
 
 /** @enum {number} ETN */
-const ETNs = Object.freeze({
+export const ETNs = Object.freeze({
   /** ETN */
   ExchangeTradedNote: cnt++,
   /** 債券ETN */
@@ -82,7 +80,7 @@ const ETNs = Object.freeze({
 });
 
 /** @enum {number} 權證 (TSE/OTC) */
-const Warrants = Object.freeze({
+export const Warrants = Object.freeze({
   /** 國內標的認購權證 */
   CallWarrantsOnDomesticUnderlyingSecurities: cnt++,
   /** 國內標的認售權證 */
@@ -102,7 +100,7 @@ const Warrants = Object.freeze({
 });
 
 /** @enum {number} 臺灣存託憑證 */
-const TaiwanDepositaryReceipt = Object.freeze({
+export const TaiwanDepositaryReceipt = Object.freeze({
   /** 臺灣存託憑證 */
   TaiwanDepositaryReceipt: cnt++,
   /** 存託憑證可轉換公司債 */
@@ -116,7 +114,7 @@ const TaiwanDepositaryReceipt = Object.freeze({
 });
 
 /** @enum {number} 公司債 */
-const CBs = Object.freeze({
+export const CBs = Object.freeze({
   /** 轉換公司債 */
   ConvertibleBonds: cnt++,
   /** 交換公司債及交換金融債 */
@@ -128,17 +126,3 @@ const CBs = Object.freeze({
   /** 附認股權公司債履約後之公司債 */
   BondsRemainingAfterExerciseOfWarrants: cnt++,
 });
-
-/**------+---------+---------+---------+---------+---------+---------+----------
- * Exports
----------+---------+---------+---------+---------+---------+---------+--------*/
-module.exports = {
-  Security,
-  Certificate,
-  ETFs,
-  BeneficiarySecurity,
-  ETNs,
-  Warrants,
-  TaiwanDepositaryReceipt,
-  CBs,
-};
