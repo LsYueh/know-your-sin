@@ -7,8 +7,11 @@ let cnt = 0;
 
 cnt = 1;
 
-/** @enum {number}  */
-export const Security = Object.freeze({
+/**
+ * @readonly
+ * @enum {number} 股票
+ */
+export const Equity = Object.freeze({
   /** 一般股票 */
   GeneralStocks: cnt++,
   /** 一般特別股 */
@@ -19,43 +22,58 @@ export const Security = Object.freeze({
   SpecialSharesWithStockOptions: cnt++,
 });
 
-/** @enum {number}  */
-export const Certificate = Object.freeze({
-  /** 受益憑證(封閉式基金) */
-  BenefitCertificates_ClosedEndFunds: cnt++,
+/**
+ * @typedef {number} Equity_t 股票
+ */
+
+/**
+ * @enum {number} Beneficiary Certificate (受益憑證)
+ * @description 受益憑證是一種有價證券，代表投資人對證券投資信託基金所享有的受益權，有點像基金的「所有權證明」，證明你是該基金的受益人。購買基金時，基金公司會發行受益憑證給投資人；在贖回或轉換前需交回，若遺失補發較麻煩。現在多數基金公司以「買賣通知單」或帳簿劃撥代替實體憑證，而ETF（指數股票型基金）也是受益憑證的一種形式，可在證券交易所交易。
+ */
+export const BeneficiaryCertificate = Object.freeze({
+  /** 封閉式基金 */
+  ClosedEndFunds: cnt++,
 });
 
-/** @enum {number} ETF */
-export const ETFs = Object.freeze({
+/**
+ * @typedef {number} BeneficiaryCertificate_t Beneficiary Certificate (受益憑證)
+ */
+
+/** @enum {number} Exchange Traded Fund (指數股票型基金) */
+export const ETF = Object.freeze({
   /** ETF */
   ExchangeTradedFund: cnt++,
   /** ETF(外幣交易) */
   ExchangeTradedFund_F: cnt++,
   /** 債券ETF */
-  ETF_Bond: cnt++,
+  Bond: cnt++,
   /** 債券ETF(外幣交易) */
-  ETF_Bond_F: cnt++,
+  Bond_F: cnt++,
   /** 平衡型ETF */
-  ETF_Balanced: cnt++,
+  Balanced: cnt++,
   /** 槓桿型ETF */
-  ETF_Leveraged: cnt++,
+  Leveraged: cnt++,
   /** 槓桿型ETF(外幣交易) */
-  ETF_Leveraged_F: cnt++,
+  Leveraged_F: cnt++,
   /** 反向型ETF */
-  ETF_Inverse: cnt++,
+  Inverse: cnt++,
   /** 反向型ETF(外幣交易) */
-  ETF_Inverse_F: cnt++,
+  Inverse_F: cnt++,
   /** 期信託ETF */
-  ETF_Futures: cnt++,
+  Futures: cnt++,
   /** 期信託ETF(外幣交易) */
-  ETF_Futures_F: cnt++,
+  Futures_F: cnt++,
   /** 主動式ETF */
-  ETF_Active: cnt++,
+  Active: cnt++,
   /** 債券主動式ETF */
-  ETF_ActiveBond: cnt++,
+  ActiveBond: cnt++,
 });
 
-/** @enum {number} 受益證券 */
+/**
+ * @typedef {number} ETF_t Exchange Traded Fund (指數股票型基金)
+ */
+
+/** @enum {number} Beneficiary Security (受益證券) */
 export const BeneficiarySecurity = Object.freeze({
   /** 金融資產證券化受益證券 */
   FinancialAssetBeneficiarySecurities: cnt++,
@@ -65,19 +83,27 @@ export const BeneficiarySecurity = Object.freeze({
   RealEstateAssetTrust: cnt++,
 });
 
-/** @enum {number} ETN */
-export const ETNs = Object.freeze({
+/**
+ * @typedef {number} BeneficiarySecurity_t Beneficiary Security (受益證券)
+ */
+
+/** @enum {number} Exchange Traded Note (指數投資證) */
+export const ETN = Object.freeze({
   /** ETN */
   ExchangeTradedNote: cnt++,
   /** 債券ETN */
-  ETN_Bond: cnt++,
+  Bond: cnt++,
   /** 槓桿型ETN */
-  ETN_Leveraged: cnt++,
+  Leveraged: cnt++,
   /** 反向型ETN */
-  ETN_Inverse: cnt++,
+  Inverse: cnt++,
   /** 期權策略型ETN */
-  ETN_Strategy: cnt++,
+  Strategy: cnt++,
 });
+
+/**
+ * @typedef {number} ETN_t Exchange Traded Note (指數投資證)
+ */
 
 /** @enum {number} 權證 (TSE/OTC) */
 export const Warrants = Object.freeze({
@@ -99,9 +125,13 @@ export const Warrants = Object.freeze({
   ExtendableCapPutWarrant: cnt++,
 });
 
-/** @enum {number} 臺灣存託憑證 */
-export const TaiwanDepositaryReceipt = Object.freeze({
-  /** 臺灣存託憑證 */
+/**
+ * @typedef {number} Warrants_t 權證
+ */
+
+/** @enum {number} Taiwan Depositary Receipt (臺灣存託憑證) */
+export const TDR = Object.freeze({
+  /** TDR */
   TaiwanDepositaryReceipt: cnt++,
   /** 存託憑證可轉換公司債 */
   DepositaryConvertibleBonds: cnt++,
@@ -113,9 +143,13 @@ export const TaiwanDepositaryReceipt = Object.freeze({
   DepositaryWarrants_DepositaryEquityWarrants: cnt++,
 });
 
-/** @enum {number} 公司債 */
-export const CBs = Object.freeze({
-  /** 轉換公司債 */
+/**
+ * @typedef {number} TDR_t Taiwan Depositary Receipt (臺灣存託憑證)
+ */
+
+/** @enum {number} Convertible Bonds (公司債) */
+export const CB = Object.freeze({
+  /** CB */
   ConvertibleBonds: cnt++,
   /** 交換公司債及交換金融債 */
   ExchangeableCorporateBondsAndExchangeableFinancialBonds: cnt++,
@@ -126,3 +160,11 @@ export const CBs = Object.freeze({
   /** 附認股權公司債履約後之公司債 */
   BondsRemainingAfterExerciseOfWarrants: cnt++,
 });
+
+/**
+ * @typedef {number} CB_t Convertible Bonds (公司債)
+ */
+
+/**
+ * @typedef { Equity_t | BeneficiaryCertificate_t | ETF_t | ETN_t | Warrants_t | TDR_t | CB_t } Security_t
+ */
