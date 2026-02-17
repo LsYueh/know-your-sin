@@ -6,22 +6,22 @@ namespace KnowYourSin.Spec.Securities;
 public enum Security_t
 {
     /// <summary>
-    /// 一般股票
+    /// 一般股票 (Voting share, Ordinary share, Equity shares)
     /// </summary>
-    GeneralStocks,
+    CommonStocks,
 
     /// <summary>
-    /// 一般特別股
+    /// 特別股票 (Preferred shares)
     /// </summary>
-    GeneralSpecialShares,
+    Preferreds,
 
     /// <summary>
     /// 可交換特別股
     /// </summary>
-    ExchangeableSpecialShares,
+    ExchangeablePreferreds,
 
     /// <summary>
     /// 附認股權特別股
     /// </summary>
-    SpecialSharesWithStockOptions,
+    PreferredWithWarrants,
 }

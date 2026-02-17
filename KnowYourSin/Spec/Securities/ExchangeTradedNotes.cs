@@ -11,6 +11,11 @@ public enum ETN_t
     General,
 
     /// <summary>
+    /// 交易所買賣指數債券
+    /// </summary>
+    ExchangeTradedNotes = General,
+
+    /// <summary>
     /// 債券ETN
     /// </summary>
     Bond,

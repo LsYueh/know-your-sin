@@ -11,6 +11,16 @@ public enum ETF_t
     General,
 
     /// <summary>
+    /// 指數股票型基金
+    /// </summary>
+    ExchangeTradedFund = General,
+
+    /// <summary>
+    /// 開放式基金
+    /// </summary>
+    OpenEndFunds = General,
+
+    /// <summary>
     /// ETF(外幣交易)
     /// </summary>
     ForeignExchange,

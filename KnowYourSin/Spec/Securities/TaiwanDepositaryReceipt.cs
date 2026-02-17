@@ -11,6 +11,11 @@ public enum TDR_t
     General,
 
     /// <summary>
+    /// 臺灣存託憑證
+    /// </summary>
+    TaiwanDepositaryReceipt = General,
+
+    /// <summary>
     /// 存託憑證可轉換公司債
     /// </summary>
     DepositaryConvertibleBonds,

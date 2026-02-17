@@ -11,6 +11,11 @@ public enum CB_t
     General,
 
     /// <summary>
+    /// 可轉換債券
+    /// </summary>
+    ConvertibleBond = General,
+
+    /// <summary>
     /// 交換公司債及交換金融債
     /// </summary>
     ExchangeableCorporateBondsAndExchangeableFinancialBonds,
