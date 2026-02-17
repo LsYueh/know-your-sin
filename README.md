@@ -47,10 +47,6 @@ T30檔案格式內容如下：
 
 # 使用方式
 
-```js
-import * as kys from 'kys';
-```
-
 <br><br>
 
 # 其他資料
