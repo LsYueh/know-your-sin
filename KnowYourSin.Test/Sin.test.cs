@@ -9,6 +9,8 @@ public class SinTest
     [DataRow("1234", 1)]
     [DataRow("12345", 38)]
     [DataRow("123456", 00)]
+    [DataRow("1234A", 00)]
+    [DataRow("1234AB", 00)]
     public void Parse_ValidIntInputs(string stockNo, int indCode)
     {
         var info = Sin.Parse(stockNo, indCode);
@@ -21,6 +23,8 @@ public class SinTest
     [DataRow("1234", "01")]
     [DataRow("12345", "38")]
     [DataRow("123456", "00")]
+    [DataRow("1234A", "00")]
+    [DataRow("1234AB", "00")]
     public void Parse_ValidStringInputs(string stockNo, string indCode)
     {
         var info = Sin.Parse(stockNo, indCode);
@@ -40,14 +44,16 @@ public class SinTest
     [ExpectedException(typeof(ArgumentException))]
     public void Parse_InvalidIntInputs_Throws(string stockNo, int indCode)
     {
-        Sin.Parse(stockNo, indCode);
+        var info = Sin.Parse(stockNo, indCode);
     }
 
     [DataTestMethod]
     [DataRow("1234", "1")]
+    [DataRow("12A4", "01")]
+    [DataRow("12A456", "01")]
     [ExpectedException(typeof(ArgumentException))]
-    public void Parse_InvalidStringInputs_Throws(string stockNo, int indCode)
+    public void Parse_InvalidStringInputs_Throws(string stockNo, string indCode)
     {
-        Sin.Parse(stockNo, indCode);
+        var info = Sin.Parse(stockNo, indCode);
     }
 }

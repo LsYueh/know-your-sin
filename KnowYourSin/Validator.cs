@@ -15,7 +15,7 @@ public static class Validator
         if (stockNo.Length < 4 || stockNo.Length > 6)
             throw new ArgumentException("StockNo must be between 4 and 6 characters.", nameof(stockNo));
 
-        if (!IsAllDigits(stockNo))
+        if (!IsAllDigits(stockNo[..4]))
             throw new ArgumentException("StockNo must contain only numeric digits.", nameof(stockNo));
     }
 
