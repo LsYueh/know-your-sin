@@ -1,4 +1,4 @@
-namespace KnowYourSin.Spec.Securities;
+namespace KnowYourSin.Spec.Securities.NonEquity;
 
 /// <summary>
 /// 受益證券

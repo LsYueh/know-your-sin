@@ -1,4 +1,4 @@
-namespace KnowYourSin.Spec.Securities;
+namespace KnowYourSin.Spec.Securities.NonEquity;
 
 /// <summary>
 /// Exchange Traded Notes (交易所買賣指數債券)

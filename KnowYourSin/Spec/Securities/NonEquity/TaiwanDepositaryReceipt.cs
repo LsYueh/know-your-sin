@@ -1,4 +1,4 @@
-namespace KnowYourSin.Spec.Securities;
+namespace KnowYourSin.Spec.Securities.NonEquity;
 
 /// <summary>
 /// Taiwan Depositary Receipt (臺灣存託憑證)

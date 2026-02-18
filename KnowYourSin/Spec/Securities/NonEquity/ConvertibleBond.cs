@@ -1,4 +1,4 @@
-namespace KnowYourSin.Spec.Securities;
+namespace KnowYourSin.Spec.Securities.NonEquity;
 
 /// <summary>
 /// Convertible Bond (可轉換債券)

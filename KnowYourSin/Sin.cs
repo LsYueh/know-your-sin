@@ -76,6 +76,17 @@ public static class Sin
 
     private static StockInfo Build(string stockNo, IndustryCategory category)
     {
+        bool isEquity = category != IndustryCategory.None;
+        
+        if (isEquity)
+        {
+            // 普通股、特別股 ...
+        }
+        else
+        {
+            // 其他金融商品 ...
+        }
+
         return new StockInfo
         {
             StockNo = stockNo,
