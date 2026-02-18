@@ -11,6 +11,11 @@ public static class IndustryCategoryExtensions
 /// </summary>
 public enum IndustryCategory
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    None = 0,
+
     /// <summary>水泥工業</summary>
     CementIndustry = 1,
 

@@ -8,7 +8,7 @@
 # 證券種類分類
 
 官方文件對證券種類的分類方式大致歸納如下：    
-![分類表](docs/TSIN-And-IND-CODE.png)  
+![分類表](/docs/TSIN-And-IND-CODE.png)  
 單純從`SIN`或是`股票代號 (STOCK-NO)`來解決定證券種類並非可行作法，故還需要`漲跌幅度資料 (T30)`中的`產業別代碼(IND-CODE)`來協助處理。 
 
 <br><br>
