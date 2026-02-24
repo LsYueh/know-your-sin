@@ -5,6 +5,8 @@ namespace KnowYourSin.Spec.Securities.NonEquity;
 /// </summary>
 public enum Warrants_t
 {
+    Unknown = 0,
+    
     /// <summary>
     /// 國內標的認購權證
     /// </summary>

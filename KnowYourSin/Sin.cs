@@ -1,4 +1,6 @@
+using KnowYourSin.Parser.Securities;
 using KnowYourSin.Spec.Industrial;
+using KnowYourSin.Spec.Securities;
 
 namespace KnowYourSin;
 
@@ -6,6 +8,7 @@ public sealed class StockInfo
 {
     public required string StockNo { get; init; }
     public IndustryCategory Industry { get; init; } = IndustryCategory.None;
+    public object? Type { get; init; } = null;
 }
 
 /// <summary>
@@ -81,6 +84,14 @@ public static class Sin
         if (isEquity)
         {
             // 普通股、特別股 ...
+            Equity_t type = Equity.Parse(stockNo);
+
+            return new StockInfo
+            {
+                StockNo = stockNo,
+                Industry = category,
+                Type = type,
+            };
         }
         else
         {

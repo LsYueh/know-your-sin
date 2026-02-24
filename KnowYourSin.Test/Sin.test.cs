@@ -1,4 +1,5 @@
 using KnowYourSin.Spec.Industrial;
+using KnowYourSin.Spec.Securities;
 
 namespace KnowYourSin.Test;
 
@@ -31,6 +32,17 @@ public class SinTest
 
         Assert.AreEqual(stockNo, info.StockNo);
         Assert.IsTrue(Enum.IsDefined(typeof(IndustryCategory), info.Industry));
+    }
+
+    [DataTestMethod]
+    [DataRow("1101" , "01", Equity_t.CommonStock)] // 台泥
+    // [DataRow("1101B", "", Equity_t.PreferredStock)] // 台泥乙特 (找不到 產業別)
+    [DataRow("1312A", "03", Equity_t.PreferredStock)] // 國喬特
+    public void Parse_Equity(string stockNo, string indCode, Equity_t expected)
+    {
+        var info = Sin.Parse(stockNo, indCode);
+
+        Assert.AreEqual(expected, info.Type);
     }
 
     // Exceptions

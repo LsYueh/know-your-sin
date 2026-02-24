@@ -5,6 +5,8 @@ namespace KnowYourSin.Spec.Securities.NonEquity;
 /// </summary>
 public enum BeneficiarySecurity_t
 {
+    Unknown = 0,
+    
     /// <summary>
     /// 金融資產證券化受益證券
     /// </summary>

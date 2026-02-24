@@ -5,6 +5,8 @@ namespace KnowYourSin.Spec.Securities;
 /// </summary>
 public enum Equity_t
 {
+    Unknown = 0,
+
     /// <summary>
     /// 一般股票 (Voting share, Ordinary share, Equity shares)
     /// </summary>

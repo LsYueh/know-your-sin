@@ -5,6 +5,8 @@ namespace KnowYourSin.Spec.Securities.NonEquity;
 /// </summary>
 public enum Certificate_t
 {
+    Unknown = 0,
+    
     /// <summary>
     /// 受益憑證
     /// </summary>

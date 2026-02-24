@@ -5,6 +5,8 @@ namespace KnowYourSin.Spec.Securities.NonEquity;
 /// </summary>
 public enum ETF_t
 {
+    Unknown = 0,
+    
     /// <summary>
     /// Exchange Traded Fund (指數股票型基金)
     /// </summary>

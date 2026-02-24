@@ -5,6 +5,8 @@ namespace KnowYourSin.Spec.Securities.NonEquity;
 /// </summary>
 public enum CB_t
 {
+    Unknown = 0,
+    
     /// <summary>
     /// Convertible Bond (可轉換債券)
     /// </summary>

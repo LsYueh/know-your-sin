@@ -5,6 +5,8 @@ namespace KnowYourSin.Spec.Securities.NonEquity;
 /// </summary>
 public enum TDR_t
 {
+    Unknown = 0,
+    
     /// <summary>
     /// Taiwan Depositary Receipt (臺灣存託憑證)
     /// </summary>

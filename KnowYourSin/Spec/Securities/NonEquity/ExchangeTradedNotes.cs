@@ -5,6 +5,8 @@ namespace KnowYourSin.Spec.Securities.NonEquity;
 /// </summary>
 public enum ETN_t
 {
+    Unknown = 0,
+    
     /// <summary>
     /// Exchange Traded Notes (交易所買賣指數債券)
     /// </summary>
